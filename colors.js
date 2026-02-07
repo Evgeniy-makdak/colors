@@ -4,9 +4,9 @@ const table = document.querySelector("#field");
 
 for (let i = 0; i < rows; i++) {
     const tr = document.createElement("tr");
-    table.appendChild(tr)[i]
+    table.appendChild(tr)
     for (let j = 0; j < cols; j++) {
         const td = document.createElement("td");
-        tr.appendChild(td)[j];
+        tr.appendChild(td);
     }
 }
