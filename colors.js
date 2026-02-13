@@ -12,7 +12,16 @@ function randomColors() {
             const td = document.createElement("td");
             tr.appendChild(td);
             td.classList.add(colors[(Math.floor(Math.random() * colors.length))]);
+            td.addEventListener('click', function changeColor() {
+                let currentClass = td.classList[0]
+                const currentIndex = colors.indexOf(currentClass);
+                let nextIndex = (currentIndex + 1) % colors.length;
+                td.classList.remove(currentClass)
+                td.classList.add(colors[nextIndex]);
+            }
+            )
         }
     }
+
 }
-randomColors()
+randomColors();
