@@ -1,12 +1,14 @@
-const rows = 3;
-const cols = 3;
-const table = document.querySelector("#field");
-
-for (let i = 0; i < rows; i++) {
-    const tr = document.createElement("tr");
-    table.appendChild(tr)
-    for (let j = 0; j < cols; j++) {
-        const td = document.createElement("td");
-        tr.appendChild(td);
+function likeOrDislike(buttons) {
+  let state = "Nothing";
+  for (let i = 0; i < buttons.length; i++) {
+    console.log(`buttons[i]: ${buttons[i]}, state: ${state}`)
+    if (buttons[i] !== state) {
+        state = buttons[i];
+    } else {
+        state = "Nothing";
     }
+  }
+  return state;
 }
+
+console.log(likeOrDislike(["Like", "Dislike", "Like", "Dislike", "Dislike", "Like", "Like", "Dislike"]));
